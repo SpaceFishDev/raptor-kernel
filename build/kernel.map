@@ -1,7 +1,7 @@
 Open Watcom Linker Version 2.0 beta Jul 11 2023 02:28:07 (32-bit)
 Copyright (c) 2002-2023 The Open Watcom Contributors. All Rights Reserved.
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       23/07/18 19:53:26
+Created on:       23/07/18 20:06:29
 Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/memory.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/memory.c): redefinition of _global_m_allocator ignored
 Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/disk/fat.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/fat.c): redefinition of _global_m_allocator ignored
 Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/graphics/video.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/graphics/video.c): redefinition of _global_m_allocator ignored
