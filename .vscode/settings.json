@@ -1,0 +1,16 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "x86.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "stddef.h": "c",
+        "disk.h": "c",
+        "fat.h": "c",
+        "memory.h": "c",
+        "interrupts.h": "c",
+        "video.h": "c",
+        "memdefs.h": "c",
+        "renderer.h": "c"
+    }
+}

@@ -1,0 +1,6 @@
+keyboard/keyboard.c(101): Warning! W400: Array subscript is of type plain char
+keyboard/keyboard.c(120): Warning! W400: Array subscript is of type plain char
+keyboard/keyboard.c(123): Warning! W400: Array subscript is of type plain char
+keyboard/keyboard.c(123): Warning! W400: Array subscript is of type plain char
+keyboard/keyboard.c(136): Warning! W400: Array subscript is of type plain char
+keyboard/keyboard.c(137): Warning! W138: No newline at end of file

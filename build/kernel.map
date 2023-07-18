@@ -1,0 +1,240 @@
+Open Watcom Linker Version 2.0 beta Jul 11 2023 02:28:07 (32-bit)
+Copyright (c) 2002-2023 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       23/07/18 19:53:26
+Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/memory.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/memory.c): redefinition of _global_m_allocator ignored
+Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/disk/fat.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/fat.c): redefinition of _global_m_allocator ignored
+Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/graphics/video.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/graphics/video.c): redefinition of _global_m_allocator ignored
+Warning! W1027: file /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/keyboard/keyboard.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/keyboard/keyboard.c): redefinition of _keyboard_state ignored
+Executable Image: /home/liamgatter/dev/C/raptor-kernel/build/kernel.bin
+creating a RAW Binary Image executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          000043aa             000003ee
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_ENTRY                 CODE           AUTO           00000000        00000013
+_TEXT                  CODE           AUTO           00000013        00004396
+CONST                  DATA           DGROUP         000043aa        0000020b
+CONST2                 DATA           DGROUP         000045b6        00000011
+_DATA                  DATA           DGROUP         000045c8        00000088
+_BSS                   BSS            DGROUP         00004650        00000148
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/asm/main.obj(main.asm)
+00000000       entry
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/asm/x86.obj(x86.asm)
+00000013       __U4D
+0000003a       __U4M
+00000054       _x86_div64_32
+00000082       _x86_Video_WriteCharTeletype
+00000098       _x86_Disk_Reset
+000000ad       _x86_Disk_Write_Sector
+000000e6       _x86_Set_Video_Mode
+000000f6       _x86_Put_Pixel
+0000010c       _x86_Disk_Read
+00000143       _x86_Disk_GetDriveParams
+00000187       _x86_Set_Cursor_Pos
+0000019a       _x86_Reboot
+000001aa       _inb
+000001b5       _outb
+000001c3*      _install_idt_element
+000001d8*      _getDS
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/main.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/main.c)
+000001e1+      mkstr_
+0000028f+      test_delay_
+0000033d+      read_pit_count_
+00000390+      init_terminal_
+00000431+      delete_terminal_
+0000047b+      clear_terminal_
+0000052d+      draw_cursor_
+0000059d+      far_strlen_
+000005da+      far_strcmp_
+0000068a+      split_
+000007d5+      far_puts_
+0000080f+      to_upper_
+00000884+      wait_for_key_
+000008bc+      handle_command_
+00001103+      display_terminal_
+0000127f+      terminal_puts_
+0000139e+      input_last_line_length_
+0000144a+      handle_key_press_
+00001ae6+      update_terminal_
+00001b40+      _main_
+00001bc0       _cstart_
+000045c8+      _old_cursor
+000045c9+      _new_cursor
+000045ca+      _cursor_n_frames
+00004650+      _global_disk
+00004658       _keyboard_state
+000046d8       _global_m_allocator
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/memory.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/memory.c)
+00001bd8       memcpy_
+00001c50       memset_
+00001caf       memcmp_
+00001d2c+      linear_allocate_
+00001dd7       init_allocator_
+00001e53+      create_new_block_
+00001eed+      block_swap_
+00001f35+      bubbleSort_
+00001fd6+      reverse_blocks_
+00002074+      debug_print_blocks_
+00002138       malloc_
+00002465       free_
+0000262b       strcmp_
+000046e4+      _temp_alloc
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/stdio.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/stdio.c)
+0000267d       strlen_
+000026e8       _putc_
+0000272c+      _puts_
+0000279d+      puts_f_
+000027dd       _printf
+00002a6b+      printf_number_
+000045b6+      _g_HexChars
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/string.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/string.c)
+00002ce2       strchr_
+00002d3d+      strcpy_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/utility.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/utility.c)
+00002db1+      align_
+00002e4a+      islower_
+00002e88       toupper_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/disk/disk.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/disk.c)
+00002ed0       init_disk_
+00002f46+      LBA_TO_CHS_
+00002ff9       read_sectors_
+00003096       write_sectors_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/disk/fat.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/fat.c)
+00003133+      FAT_ReadBootSector_
+00003167+      FAT_ReadFat_
+000031ab       init_fat_
+000033f6+      FAT_ClusterToLba_
+0000344c+      FAT_OpenEntry_
+00003616+      FAT_NextCluster_
+0000369f       fread_
+00003a03+      FAT_GetUsedClusterCount_
+00003af2+      FAT_FindFreeCluster_
+00003bcc       fread_entry_
+00003c25       fclose_
+00003ca3+      FAT_FindFile_
+00003ddd       fopen_
+00003f5b+      writeSector_
+00003f90+      writeCluster_
+00003ffb+      fwrite_
+0000401e+      fcreate_entry_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/graphics/video.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/graphics/video.c)
+0000417d       init_graphics_
+0000419c+      blit_pixels_
+000041d8+      put_pixel_
+00004231       draw_character_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/kernel/c/keyboard/keyboard.obj(/home/liamgatter/dev/C/raptor-kernel/src/kernel/keyboard/keyboard.c)
+00004275+      scan_code_as_ascii_
+0000429c       getk_
+000042f9       update_keyboard_
+0000434f       init_keyboard_
+00004382+      getc_
+000045d0+      _kbd_US
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+main.asm        _ENTRY                CODE           00000000         00000013
+x86.asm         _TEXT                 CODE           00000013         000001ce
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/interrupts.c
+                _TEXT                 CODE           000001e1         00000000
+                CONST                 DATA           000043aa         00000000
+                CONST2                DATA           000045b6         00000000
+                _DATA                 DATA           000045c8         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/main.c
+                _TEXT                 CODE           000001e1         000019f7
+                CONST                 DATA           000043aa         00000067
+                CONST2                DATA           000045b6         00000000
+                _DATA                 DATA           000045c8         00000004
+                _BSS                  BSS            00004650         00000094
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/memory.c
+                _TEXT                 CODE           00001bd8         00000aa5
+                CONST                 DATA           00004412         0000002a
+                CONST2                DATA           000045b6         00000000
+                _DATA                 DATA           000045cc         00000000
+                _BSS                  BSS            000046e4         00000014
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/stdio.c
+                _TEXT                 CODE           0000267d         00000665
+                CONST                 DATA           0000443c         00000000
+                CONST2                DATA           000045b6         00000011
+                _DATA                 DATA           000045cc         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/string.c
+                _TEXT                 CODE           00002ce2         000000cf
+                CONST                 DATA           0000443c         00000000
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045cc         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/utility.c
+                _TEXT                 CODE           00002db1         0000011f
+                CONST                 DATA           0000443c         00000000
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045cc         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/disk.c
+                _TEXT                 CODE           00002ed0         00000263
+                CONST                 DATA           0000443c         00000000
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045cc         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/disk/fat.c
+                _TEXT                 CODE           00003133         0000104a
+                CONST                 DATA           0000443c         00000179
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045cc         00000004
+                _BSS                  BSS            000046f8         00000014
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/graphics/video.c
+                _TEXT                 CODE           0000417d         000000f8
+                CONST                 DATA           000045b6         00000000
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045d0         00000000
+                _BSS                  BSS            0000470c         0000000c
+/home/liamgatter/dev/C/raptor-kernel/src/kernel/keyboard/keyboard.c
+                _TEXT                 CODE           00004275         00000134
+                CONST                 DATA           000045b6         00000000
+                CONST2                DATA           000045c8         00000000
+                _DATA                 DATA           000045d0         00000080
+                _BSS                  BSS            00004718         00000080
+Warning! W1014: stack segment not found
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0200 (512.)
+Memory size:  4798 (18328.)
+Entry point address: 00000000
+Link time: 00:00.00

@@ -1,0 +1,19 @@
+disk/fat.c(367): Warning! E1179: Parameter 1, type qualifier mismatch
+disk/fat.c(367): Note! I2003: source conversion type is 'char const *'
+disk/fat.c(367): Note! I2004: target conversion type is 'char *'
+disk/fat.c(367): Note! I2002: 'strlen' defined in: ../std/stdio.h(12)
+disk/fat.c(412): Warning! W303: Parameter 'disk' has been defined, but not referenced
+disk/fat.c(413): Warning! W303: Parameter 'size' has been defined, but not referenced
+disk/fat.c(412): Warning! W303: Parameter 'path' has been defined, but not referenced
+disk/fat.c(412): Warning! W303: Parameter 'data' has been defined, but not referenced
+disk/fat.c(420): Warning! W112: Pointer truncated
+disk/fat.c(420): Note! I2003: source conversion type is 'FILE __far *'
+disk/fat.c(420): Note! I2004: target conversion type is 'FILE *'
+disk/fat.c(448): Warning! W112: Parameter 4: Pointer truncated
+disk/fat.c(448): Note! I2003: source conversion type is 'unsigned char __far *'
+disk/fat.c(448): Note! I2004: target conversion type is 'void *'
+disk/fat.c(448): Note! I2002: 'fread' defined in: disk/fat.c(193)
+disk/fat.c(450): Warning! W112: Parameter 3: Pointer truncated
+disk/fat.c(450): Note! I2003: source conversion type is 'unsigned char __far *'
+disk/fat.c(450): Note! I2004: target conversion type is 'void const *'
+disk/fat.c(450): Note! I2002: 'writeSector' defined in: disk/fat.c(399)

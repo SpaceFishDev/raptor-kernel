@@ -1,0 +1,162 @@
+Open Watcom Linker Version 2.0 beta Jul 11 2023 02:28:07 (32-bit)
+Copyright (c) 2002-2023 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       23/07/13 20:05:22
+Executable Image: /home/liamgatter/dev/C/raptor-kernel/build/stage2.bin
+creating a RAW Binary Image executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00001f82             000001fc
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_ENTRY                 CODE           AUTO           00000000        00000013
+_TEXT                  CODE           AUTO           00000013        00001f6f
+CONST                  DATA           DGROUP         00001f82        000001da
+CONST2                 DATA           DGROUP         0000215c        00000011
+_DATA                  DATA           DGROUP         0000216e        00000008
+_BSS                   BSS            DGROUP         00002176        00000008
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/asm/main.obj(main.asm)
+00000000       entry
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/asm/x86.obj(x86.asm)
+00000013       __U4D
+0000003a       __U4M
+00000054       _x86_div64_32
+00000082       _x86_Video_WriteCharTeletype
+00000095       _x86_Disk_Reset
+000000aa       _x86_Disk_Write_Sector
+000000e3       _x86_Disk_Read
+0000011a       _x86_Disk_GetDriveParams
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/disk.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/disk.c)
+0000015e       init_disk_
+000001d4+      LBA_TO_CHS_
+00000287       read_sectors_
+00000324       write_sectors_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/fat.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/fat.c)
+000003c1+      FAT_ReadBootSector_
+000003f5+      FAT_ReadFat_
+00000439       FAT_Initialize_
+00000684+      FAT_ClusterToLba_
+000006da+      FAT_OpenEntry_
+000008a4+      FAT_NextCluster_
+0000092d       FAT_Read_
+00000c91+      FAT_GetUsedClusterCount_
+00000d80+      FAT_FindFreeCluster_
+00000e5a       FAT_ReadEntry_
+00000eb3       FAT_Close_
+00000f31+      FAT_FindFile_
+0000106b       FAT_Open_
+000011e9+      writeSector_
+0000121e+      writeCluster_
+00001289       FAT_WriteFile_
+000012ac       FAT_CreateEntry_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/main.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/main.c)
+0000140b+      start_
+000015e5       _cstart_
+00002172+      _g_Data
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/memory.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/memory.c)
+000015fa       memcpy_
+00001672       memset_
+000016d1       memcmp_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/stdio.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/stdio.c)
+0000174e       strlen_
+000017b9       putc_
+000017f1+      puts_
+0000185f+      puts_f_
+0000189c       _printf
+00001b20+      printf_number_
+0000215c+      _g_HexChars
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/string.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/string.c)
+00001d94       strchr_
+00001def+      strcpy_
+Module: /home/liamgatter/dev/C/raptor-kernel/build/stage2/c/utility.obj(/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/utility.c)
+00001e63+      align_
+00001efc+      islower_
+00001f3a       toupper_
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+main.asm        _ENTRY                CODE           00000000         00000013
+x86.asm         _TEXT                 CODE           00000013         0000014b
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/disk.c
+                _TEXT                 CODE           0000015e         00000263
+                CONST                 DATA           00001f82         00000000
+                CONST2                DATA           0000215c         00000000
+                _DATA                 DATA           0000216e         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/fat.c
+                _TEXT                 CODE           000003c1         0000104a
+                CONST                 DATA           00001f82         00000179
+                CONST2                DATA           0000215c         00000000
+                _DATA                 DATA           0000216e         00000004
+                _BSS                  BSS            00002176         00000008
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/main.c
+                _TEXT                 CODE           0000140b         000001ef
+                CONST                 DATA           000020fc         00000060
+                CONST2                DATA           0000215c         00000000
+                _DATA                 DATA           00002172         00000004
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/memory.c
+                _TEXT                 CODE           000015fa         00000154
+                CONST                 DATA           0000215c         00000000
+                CONST2                DATA           0000215c         00000000
+                _DATA                 DATA           00002176         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/stdio.c
+                _TEXT                 CODE           0000174e         00000646
+                CONST                 DATA           0000215c         00000000
+                CONST2                DATA           0000215c         00000011
+                _DATA                 DATA           00002176         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/string.c
+                _TEXT                 CODE           00001d94         000000cf
+                CONST                 DATA           0000215c         00000000
+                CONST2                DATA           0000216e         00000000
+                _DATA                 DATA           00002176         00000000
+/home/liamgatter/dev/C/raptor-kernel/src/bootloader/stage2/utility.c
+                _TEXT                 CODE           00001e63         0000011f
+                CONST                 DATA           0000215c         00000000
+                CONST2                DATA           0000216e         00000000
+                _DATA                 DATA           00002176         00000000
+Warning! W1014: stack segment not found
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0200 (512.)
+Memory size:  217e (8574.)
+Entry point address: 00000000
+Link time: 00:00.00
